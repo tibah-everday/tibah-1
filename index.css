@@ -1,1 +1,33 @@
 /* font-family: 'Open Sans', sans-serif; */
+/* default setting */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 이 아래 지우고 깔끔하게 css새로이 시작하던가! 근데 HTML 네비게이션 바 로고에 이미지 써버려서 꼬였는데 어쩌지 
+  #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar_logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar_logo > i,
+#navbar_logo > a {
+  display: inline-block;
+} */
