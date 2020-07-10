@@ -14,36 +14,46 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat+Subrayada&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <i
-          ><img src="images/favicon.png" alt="" width="40px" height="40px"
-        /></i>
-        <a href="#">IF</a>
-      </div>
-      <div class="navbar__menu">
-        <ul>
-          <li class="navbar__menu__item">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">Our work</li>
-          <li class="navbar__menu__item">Contact</li>
-        </ul>
-      </div>
-    </nav>
+    <!-- <div class="navbar__logo">
+      <i
+      ><img src="images/favicon.png" alt="" width="40px" height="35px"
+      /></i>
+      <i class="fas fa-hand-point-right"></i>
+      <h1><a href="#">IF</a></h1>
+    </div> -->
+
     <!-- Home -->
     <section id="home">
-      <div class="services__list">
+      <nav class="navbar">
+        <div class="navbar__menu">
+          <ul>
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">Our Work</li>
+            <li class="navbar__menu__item">Contact</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="home__title">
+        <img src="images/favicon4.png" alt="" width="80px" height="80px" />
+        <h1>INDEXFINGER</h1>
+      </div>
+      <div class="home__services">
         <ul>
-          <i><img src="images/lullabearLogo.png" alt="" /></i>
-          <i><img src="images/togetherooLogo.png" alt="" /></i>
-          <i><img src="images/tibahLogo.png" alt="" /></i>
+          <li><img src="images/lullabearLogo.png" alt="" /></li>
+          <li><img src="images/togetherooLogo.png" alt="" /></li>
+          <li><img src="images/tibahLogo.png" alt="" /></li>
         </ul>
       </div>
     </section>

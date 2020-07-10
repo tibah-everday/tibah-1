@@ -1,10 +1,13 @@
 /* font-family: 'Open Sans', sans-serif; */
+/* font-family: 'Montserrat Subrayada', sans-serif; */
 /* default setting */
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
+
+  font-size: 14px;
 }
 a {
   text-decoration: none;
@@ -15,19 +18,57 @@ ul {
   padding-left: 0;
 }
 
-/* 이 아래 지우고 깔끔하게 css새로이 시작하던가! 근데 HTML 네비게이션 바 로고에 이미지 써버려서 꼬였는데 어쩌지 
-  #navbar {
+#home {
+  background: url("images/background.png") center/cover no-repeat;
+  text-align: center;
+}
+
+.navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar__logo {
+  display: flex;
   align-items: center;
 }
 
-#navbar_logo {
+.navbar__logo > * {
+  padding: 6px 10px;
+  margin: 4px;
+}
+.navbar__logo > i {
+  font-size: 20px;
+}
+.navbar__logo h1 a {
+  color: #fff;
+}
+.navbar__menu ul {
   display: flex;
   justify-content: space-between;
 }
 
-#navbar_logo > i,
-#navbar_logo > a {
-  display: inline-block;
-} */
+.navbar__menu__item {
+  padding: 6px 20px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.navbar__menu__item.active,
+.navbar__menu__item:hover {
+  border: 1px solid #fff;
+  background-color: #3d3d3d;
+}
+
+.home__title h1 {
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  color: #e3dede;
+}
+.home__services ul li img {
+  width: 80px;
+  height: 80px;
+}
