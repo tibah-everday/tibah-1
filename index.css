@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
 
@@ -12,6 +13,9 @@ body {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -123,4 +127,160 @@ ul {
 
 .major__icon:hover i {
   transform: rotate(-15deg) scale(1.1);
+}
+
+/* skills */
+#skills {
+  background-color: #faf6d4;
+}
+
+.skillset {
+  display: flex;
+  background-color: darkgrey;
+  color: white;
+  margin: 20px 0;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: #70706e;
+  padding: 20px 40px;
+}
+/* 왜 다크그레이가 더 연하지... 무튼 */
+.skillset__right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.tools {
+  flex-basis: 55%;
+  background-color: grey;
+  padding: 20px;
+}
+
+.tools__list > li {
+  padding-bottom: 10px;
+}
+.etc {
+  padding: 20px;
+}
+
+.etc__list > li {
+  padding-bottom: 10px;
+}
+.skill {
+  margin-bottom: 24px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+}
+
+.skill__value {
+  height: 3px;
+  background-color: #f5ad38;
+}
+/*work  */
+
+.project__image {
+  width: 100px;
+  height: 200px;
+}
+
+.work__categories {
+  margin: 40px;
+}
+.category_btn {
+  border: 1px solid #f5f1eb;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 8px 48px;
+}
+
+.category_btn.active,
+.category_btn:hover {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.category__count {
+  transition: all 250ms ease;
+  font-size: 12px;
+  border: 1px solid #f5ad38;
+  background-color: #f5ad38;
+  display: inline-block;
+  line-height: 19px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 5px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+}
+.category_btn.active .category__count,
+.category_btn:hover .category__count {
+  top: 0;
+  left: 0;
+}
+
+.work__projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: white;
+}
+
+.project__image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 250ms ease;
+}
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+.project__description h3:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #fff;
+  margin-top: 8px;
 }
