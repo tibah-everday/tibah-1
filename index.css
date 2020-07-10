@@ -284,3 +284,26 @@ ul {
   background-color: #fff;
   margin-top: 8px;
 }
+
+#contact {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+.contact__title {
+  font-size: 40px;
+  margin: 32px 0;
+}
+
+.contact__email {
+  font-size: 23px;
+}
+
+.contact__links i {
+  transition: all 250ms ease;
+  font-size: 24px;
+  padding: 0 8px;
+  color: #fff;
+}
+.contact__links i:hover {
+  transform: scale(1.2);
+}
