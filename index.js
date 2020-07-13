@@ -1,11 +1,12 @@
 "use strict";
 
-// 네비바 스크롤시 투명도 x, 홈 스크롤 시 투명도 추가
+// 네비바 스크롤시 투명도 x, 홈 스크롤 시 투명도 추가, 화살표 등장
 
 const navBar = document.querySelector(".navbar");
 const navbarHeight = navBar.getBoundingClientRect().height;
 const home = document.querySelector("#home");
 const homeHeight = home.getBoundingClientRect().height;
+const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navBar.classList.add("navbar--dark");
@@ -30,6 +31,13 @@ document.addEventListener("scroll", () => {
   //   }
   //   부등식 합쳐서 쓰고(70<ㅁㄴㅇㄹ<150) 이런식으로, else if 쓰는 게 좋겠지만 나는 귀찮다
   home.style.opacity = 1 - window.scrollY / homeHeight;
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 1000) {
+      arrowUp.classList.add("visible");
+    } else {
+      arrowUp.classList.remove("visible");
+    }
+  });
 });
 
 // 네비바 메뉴 클릭시 해당 섹션으로 스크롤 이동
@@ -50,4 +58,11 @@ navbarMenu.addEventListener("click", (event) => {
   console.log(scrollTo);
   scrollTo.scrollIntoView({ behavior: "smooth" });
   //   link.scrollIntoView();
+});
+
+// 애로우 스크롤
+
+arrowUp.addEventListener("click", () => {
+  const scrollTo = document.querySelector("#home");
+  scrollTo.scrollIntoView({ behavior: "smooth" });
 });

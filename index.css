@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+button:focus {
+  outline: none;
+}
 body {
   margin: 0;
 
@@ -357,6 +360,28 @@ ul {
   transform: scale(1.2);
 }
 
+/* arrowup */
+
+.arrow-up {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  background-color: #3d3d3d;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 250ms ease-in-out;
+  pointer-events: none;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
