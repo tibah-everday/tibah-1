@@ -28,18 +28,29 @@ ul {
   padding-left: 0;
 }
 
-/* home */
+/* nav&home */
 #home {
   background: url("images/background.png") center/cover no-repeat;
   text-align: center;
   padding: 20px;
+  padding-top: 40px;
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(119, 120, 122, 0.2);
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: #fff;
+  transition: all 450ms ease-in-out;
+}
+
+.navbar--dark {
+  z-index: 999;
+  padding: 0;
+  background-color: rgba(61, 61, 61, 1);
 }
 
 .navbar__logo {
@@ -58,12 +69,13 @@ ul {
   color: #fff;
 }
 .navbar__menu ul {
+  margin: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .navbar__menu__item {
-  padding: 6px 20px;
+  padding: 0px 20px;
   margin: 20px;
   cursor: pointer;
   border-radius: 4px;
@@ -367,3 +379,37 @@ ul {
     flex-grow: 1;
   }
 }
+
+/* .example {
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+}
+.a {
+  display: flex;
+  background-color: yellow;
+  width: 100px;
+  margin: 10px;
+}
+.b {
+  background-color: green;
+  width: 100px;
+}
+.c {
+  background-color: red;
+  width: 100px;
+}
+.d {
+  flex-grow: 1;
+  background-color: orange;
+}
+.e {
+  margin-left: 5px;
+  flex-grow: 1;
+  background-color: blue;
+}
+.f {
+  margin-left: 5px;
+  flex-grow: 1;
+  background-color: purple;
+} */
