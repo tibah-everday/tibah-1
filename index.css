@@ -34,6 +34,8 @@ ul {
   text-align: center;
   padding: 20px;
   padding-top: 40px;
+  transition: all 250ms ease-in-out;
+  /* opacity: 0.3; */
 }
 
 .navbar {

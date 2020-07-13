@@ -1,15 +1,35 @@
 "use strict";
 
-// 네비바 스크롤시 투명도 x
+// 네비바 스크롤시 투명도 x, 홈 스크롤 시 투명도 추가
 
 const navBar = document.querySelector(".navbar");
 const navbarHeight = navBar.getBoundingClientRect().height;
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navBar.classList.add("navbar--dark");
   } else {
     navBar.classList.remove("navbar--dark");
   }
+  //   if (window.scrollY > 70) {
+  //     home.classList.add("home--semi");
+  //   } else {
+  //     home.classList.remove("home--semi");
+  //   }
+
+  //   if (window.scrollY > 150) {
+  //     home.classList.add("home--dim");
+  //   } else {
+  //     home.classList.remove("home--dim");
+  //   }
+  //   if (window.scrollY > 230) {
+  //     home.classList.add("home--transparent");
+  //   } else {
+  //     home.classList.remove("home--transparent");
+  //   }
+  //   부등식 합쳐서 쓰고(70<ㅁㄴㅇㄹ<150) 이런식으로, else if 쓰는 게 좋겠지만 나는 귀찮다
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // 네비바 메뉴 클릭시 해당 섹션으로 스크롤 이동
