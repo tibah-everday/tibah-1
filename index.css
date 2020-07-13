@@ -73,7 +73,15 @@ ul {
   border: 1px solid #fff;
   background-color: #3d3d3d;
 }
-
+.navbar__toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  position: absolute;
+  right: 32px;
+  top: 55px;
+  display: none;
+}
 .home__title {
   padding-top: 80px;
 }
@@ -92,10 +100,33 @@ ul {
   margin: 0 auto;
   display: flex;
 }
+.home__services ul li {
+  font-size: 0;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: "Inconsolata", monospace;
+}
 
 .home__services ul li img {
   width: 80px;
   height: 80px;
+}
+
+.home__services ul li:hover {
+  font-size: 16px;
+}
+.home__services ul li:hover img {
+  width: 56px;
+  height: 56px;
+}
+
+.home__services ul li:nth-child(1) {
+  color: #428df5;
+}
+.home__services ul li:nth-child(2) {
+  color: #eb9021;
+}
+.home__services ul li:nth-child(3) {
+  color: #eb3626;
 }
 
 /* about */
@@ -198,10 +229,14 @@ ul {
   margin: 40px;
 }
 .category_btn {
+  width: 120px;
+  /* width: 25%; */
+  height: 38px;
   border: 1px solid #f5f1eb;
   border-radius: 4px;
   font-size: 14px;
-  padding: 8px 48px;
+  padding: 8px 0;
+  margin-top: 12px;
 }
 
 .category_btn.active,
@@ -246,7 +281,7 @@ ul {
   width: 280px;
   height: 250px;
   margin: 2px;
-  background-color: white;
+  background-color: ghostwhite;
 }
 
 .project__image {
@@ -306,4 +341,29 @@ ul {
 }
 .contact__links i:hover {
   transform: scale(1.2);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__menu ul {
+    flex-direction: column;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 20px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
 }
