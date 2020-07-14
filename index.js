@@ -13,23 +13,7 @@ document.addEventListener("scroll", () => {
   } else {
     navBar.classList.remove("navbar--dark");
   }
-  //   if (window.scrollY > 70) {
-  //     home.classList.add("home--semi");
-  //   } else {
-  //     home.classList.remove("home--semi");
-  //   }
 
-  //   if (window.scrollY > 150) {
-  //     home.classList.add("home--dim");
-  //   } else {
-  //     home.classList.remove("home--dim");
-  //   }
-  //   if (window.scrollY > 230) {
-  //     home.classList.add("home--transparent");
-  //   } else {
-  //     home.classList.remove("home--transparent");
-  //   }
-  //   부등식 합쳐서 쓰고(70<ㅁㄴㅇㄹ<150) 이런식으로, else if 쓰는 게 좋겠지만 나는 귀찮다
   home.style.opacity = 1 - window.scrollY / homeHeight;
   document.addEventListener("scroll", () => {
     if (window.scrollY > 1000) {
@@ -46,18 +30,8 @@ const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  //   console.log(link);
-  if (link === undefined) {
-    return;
-  } else {
-    console.log(link);
-  }
-  //   link.scrollIntoView();
-  console.log(link);
   const scrollTo = document.querySelector(link);
-  console.log(scrollTo);
   scrollTo.scrollIntoView({ behavior: "smooth" });
-  //   link.scrollIntoView();
 });
 
 // 애로우 스크롤
@@ -65,4 +39,31 @@ navbarMenu.addEventListener("click", (event) => {
 arrowUp.addEventListener("click", () => {
   const scrollTo = document.querySelector("#home");
   scrollTo.scrollIntoView({ behavior: "smooth" });
+});
+
+// 프로젝트 필터
+const workBtnContainer = document.querySelector(".work__categories");
+console.log(workBtnContainer);
+const projectContainer = document.querySelector(".work__projects");
+console.log(projectContainer);
+
+const projects = document.querySelectorAll(".project");
+console.log(projects);
+
+workBtnContainer.addEventListener("click", () => {
+  const filter =
+    event.target.dataset.filter || event.target.parentNode.dataset.filter;
+  console.log(filter);
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project);
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 });
