@@ -53,7 +53,11 @@ console.log(projects);
 workBtnContainer.addEventListener("click", () => {
   const filter =
     event.target.dataset.filter || event.target.parentNode.dataset.filter;
-  console.log(filter);
+  const active = document.querySelector(".category_btn.active");
+  active.classList.remove("active");
+  const target =
+    event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+  target.classList.add("active");
   projectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
@@ -67,3 +71,14 @@ workBtnContainer.addEventListener("click", () => {
     projectContainer.classList.remove("anim-out");
   }, 300);
 });
+
+// 버튼제어 따로 만들었을 경우는 아래(My Code)
+
+// const workBtns = document.querySelectorAll(".category_btn");
+// console.log(workBtns);
+// workBtnContainer.addEventListener("click", () => {
+//   workBtns.forEach((btn) => {
+//     btn.classList.remove("active");
+//   });
+//   event.target.classList.add("active");
+// });
