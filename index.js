@@ -28,6 +28,9 @@ document.addEventListener("scroll", () => {
 
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
+  navbarMenu.classList.remove("navbarOpener");
+  hamburgerOpener.classList.toggle("close");
+  hamburgerCloser.classList.toggle("close");
   const target = event.target;
   const link = target.dataset.link;
   const scrollTo = document.querySelector(link);
@@ -82,3 +85,16 @@ workBtnContainer.addEventListener("click", () => {
 //   });
 //   event.target.classList.add("active");
 // });
+
+const hamburger = document.querySelector(".navbar__toggle-btn");
+const hamburgerOpener = document.querySelector(".opener");
+const hamburgerCloser = document.querySelector(".closer");
+hamburger.addEventListener("click", () => {
+  // const navbarMenu = document.querySelector(".navbar__menu");
+  navbarMenu.classList.toggle("navbarOpener");
+  console.log(hamburgerOpener);
+  console.log(hamburgerCloser);
+  hamburgerOpener.classList.toggle("close");
+  hamburgerCloser.classList.toggle("close");
+  // hamburger.childNodes.toggle("close");
+});

@@ -9,6 +9,7 @@ button:focus {
   outline: none;
 }
 body {
+  padding: 0;
   margin: 0;
 
   font-size: 14px;
@@ -99,12 +100,19 @@ ul {
 .navbar__toggle-btn {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: rgb(199, 105, 17, 1);
   position: absolute;
+  font-size: 20px;
   right: 32px;
-  top: 55px;
+  top: 22px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__toggle-btn i.close {
   display: none;
 }
+
 .home__title {
   padding-top: 80px;
 }
@@ -261,7 +269,7 @@ ul {
   font-size: 14px;
   padding: 8px 0;
   margin-top: 12px;
-  margin-left: 3px;
+  margin-left: 5px;
   cursor: pointer;
   flex-grow: 1;
 }
@@ -401,14 +409,88 @@ ul {
 }
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgba(119, 120, 122, 0);
+  }
   .navbar__toggle-btn {
     display: block;
   }
   .navbar__menu {
     display: none;
+    position: relative;
+    top: 150px;
+    text-align: center;
   }
+  .navbarOpener {
+    display: block;
+  }
+
   .navbar__menu ul {
     flex-direction: column;
+    background-color: #3d3d3d;
+    color: rgb(199, 105, 17, 1);
+    font-weight: bold;
+    position: relative;
+    width: 768px;
+    top: 0px;
+  }
+  .navbar__menu ul li {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .navbar__menu ul li:last-child {
+    padding-bottom: 15px;
+  }
+
+  /* .home__services ul li {
+    font-size: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-family: "Inconsolata", monospace;
+  }
+  
+  .home__services ul li img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .home__services ul li:hover {
+    font-size: 16px;
+  }
+  .home__services ul li:hover img {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .home__services ul li:nth-child(1) {
+    color: #428df5;
+  }
+  .home__services ul li:nth-child(2) {
+    color: #eb9021;
+  }
+  .home__services ul li:nth-child(3) {
+    color: #eb3626;
+  } */
+  #home {
+    padding-bottom: 45px;
+  }
+  .home__services ul li:hover {
+    font-size: 0;
+  }
+  .home__services ul li:hover img {
+    width: 80px;
+    height: 80px;
+  }
+  .home__title img {
+    width: 0;
+    height: 0;
+  }
+  .home__title h1 {
+    font-size: 16px;
+    color: grey;
+  }
+
+  .home__services img {
+    width: 0;
   }
   .about__majors {
     flex-direction: column;
