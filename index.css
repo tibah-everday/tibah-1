@@ -509,13 +509,20 @@ ul {
   }
   .work__categories {
     margin: 20px;
+    flex-direction: column;
   }
   .category_btn {
-    font-size: 5px;
-    padding: 8px 8px;
+    letter-spacing: 0.1em;
   }
-  .category_btn span {
-    display: none;
+  .category__count {
+    top: 0;
+    left: 20px;
+  }
+  .arrow-up {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 20px;
   }
 }
 
