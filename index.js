@@ -29,8 +29,10 @@ document.addEventListener("scroll", () => {
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   navbarMenu.classList.remove("navbarOpener");
-  hamburgerOpener.classList.toggle("close");
-  hamburgerCloser.classList.toggle("close");
+  hamburgerOpener.classList.remove("close");
+  hamburgerCloser.classList.add("close");
+  // hamburgerOpener.classList.toggle("close");
+  // hamburgerCloser.classList.toggle("close");
   const target = event.target;
   const link = target.dataset.link;
   const scrollTo = document.querySelector(link);

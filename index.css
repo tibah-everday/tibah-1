@@ -504,6 +504,19 @@ ul {
   .project {
     flex-grow: 1;
   }
+  .about__majors {
+    margin: 20px 0;
+  }
+  .work__categories {
+    margin: 20px;
+  }
+  .category_btn {
+    font-size: 5px;
+    padding: 8px 8px;
+  }
+  .category_btn span {
+    display: none;
+  }
 }
 
 /* .example {
