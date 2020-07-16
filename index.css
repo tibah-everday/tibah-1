@@ -3,6 +3,7 @@
 /* default setting */
 * {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 button:focus {
@@ -36,7 +37,7 @@ ul {
 #home {
   background: url("images/background.png") center/cover no-repeat;
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   padding-top: 40px;
   transition: all 250ms ease-in-out;
   /* opacity: 0.3; */
@@ -46,7 +47,7 @@ ul {
   position: fixed;
   width: 100%;
   height: 57px;
-  box-sizing: border-box;
+
   background-color: rgba(119, 120, 122, 0.4);
   display: flex;
   justify-content: space-around;
@@ -62,26 +63,10 @@ ul {
   background-color: rgba(61, 61, 61, 1);
 }
 
-.navbar__logo {
-  display: flex;
-  align-items: center;
-}
-
-.navbar__logo > * {
-  padding: 6px 10px;
-  margin: 4px;
-}
-.navbar__logo > i {
-  font-size: 20px;
-}
-.navbar__logo h1 a {
-  color: #fff;
-}
-
 .navbar__menu ul {
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
 }
 
 .navbar__menu__item {
@@ -229,6 +214,7 @@ ul {
   padding-bottom: 10px;
 }
 .etc {
+  /* flex-basis: 45%; */
   padding: 20px;
 }
 
@@ -267,7 +253,8 @@ ul {
 .category_btn {
   /* width: 140px; */
   /* width: 25%; */
-  height: 38px;
+  /* height: 38px; */
+  /* 이 위에 높이 주석 처리 해도 똑같이 38px뜨길래 해놨는데, 나중에 문제 생기면 풀도록 */
   border: 1px solid #f5f1eb;
   border-radius: 4px;
   font-size: 14px;
@@ -434,14 +421,12 @@ ul {
     background-color: #3d3d3d;
     color: rgb(199, 105, 17, 1);
     font-weight: bold;
-    position: relative;
     width: 768px;
-    top: 0px;
   }
-  .navbar__menu ul li {
+  /* .navbar__menu ul li {
     padding-left: 50px;
     padding-right: 50px;
-  }
+  } */
   .navbar__menu ul li:last-child {
     padding-bottom: 15px;
   }
@@ -516,6 +501,7 @@ ul {
     flex-direction: column;
   }
   .category_btn {
+    margin-left: 0;
     letter-spacing: 0.1em;
   }
   .category__count {
