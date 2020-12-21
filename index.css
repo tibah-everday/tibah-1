@@ -108,14 +108,19 @@ ul {
   color: #e3dede;
 }
 
+.home__title h1 p {
+  color: red;
+}
+
 .home__services {
   padding-bottom: 50px;
 }
 .home__services ul {
-  width: 244px;
+  width: 163px;
   margin: 0 auto;
   display: flex;
 }
+
 .home__services ul li {
   font-size: 0;
   /* font-family: "Ubuntu", sans-serif; */
@@ -366,6 +371,10 @@ ul {
   font-size: 23px;
 }
 
+.contact__links {
+  padding-bottom: 20px;
+}
+
 .contact__links i {
   transition: all 250ms ease;
   font-size: 24px;
@@ -376,6 +385,26 @@ ul {
   transform: scale(1.2);
 }
 
+.contact__info {
+  width: 440px;
+  margin: 0 auto;
+}
+
+.contact__info ul {
+  display: flex;
+
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.contact__info ul li {
+  padding-top: 5px;
+}
+
+.contact__info a {
+  cursor: pointer;
+  color: #fff;
+}
 /* arrowup */
 
 .arrow-up {
@@ -476,6 +505,10 @@ ul {
   .home__title h1 {
     font-size: 16px;
     color: grey;
+  }
+
+  .home__title h1 p {
+    color: red;
   }
 
   .home__services img {
